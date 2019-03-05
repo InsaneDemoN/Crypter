@@ -115,5 +115,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-subtract-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-sha2-icon white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-sha2-icon_white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

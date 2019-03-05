@@ -63,6 +63,16 @@ namespace Crypter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_sha2_icon_white {
+            get {
+                object obj = ResourceManager.GetObject("account-sha2-icon_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_access_filled_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-access-filled-50", resourceCulture);
