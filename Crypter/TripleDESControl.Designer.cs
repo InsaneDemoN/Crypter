@@ -139,12 +139,12 @@
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.White;
             this.textBox4.Location = new System.Drawing.Point(203, 297);
             this.textBox4.Margin = new System.Windows.Forms.Padding(0);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(355, 23);
+            this.textBox4.Size = new System.Drawing.Size(355, 25);
             this.textBox4.TabIndex = 9;
             // 
             // textBox6

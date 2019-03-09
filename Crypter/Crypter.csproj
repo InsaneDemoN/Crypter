@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Resources\RSACrypt.cs" />
     <Compile Include="Resources\TripleDESCrypt.cs" />
     <Compile Include="Resources\SHA256Crypt.cs" />
     <Compile Include="SHA256Control.cs">
