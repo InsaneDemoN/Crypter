@@ -23,12 +23,12 @@ namespace Crypter.Resources
 
             ICryptoTransform trans = triple.CreateEncryptor();
             encrypted = trans.TransformFinalBlock(uTF.GetBytes(text), 0, text.Length);
-            res = BitConverter.ToString(encrypted);
+            res = Convert.ToBase64String(encrypted);
 
 
             return res;
         }
-        public string DecryptString(string key)
+        public string DecryptString(string key,string text)
         {
             string res = "";
             TripleDESCryptoServiceProvider triple = new TripleDESCryptoServiceProvider();
@@ -42,8 +42,8 @@ namespace Crypter.Resources
             ICryptoTransform trans = triple.CreateDecryptor();
             try
             {
-                
-                byte[] decrypted = trans.TransformFinalBlock(encrypted, 0, encrypted.Length);
+                byte[] cipher = Convert.FromBase64String(text);
+                byte[] decrypted = trans.TransformFinalBlock(cipher, 0, cipher.Length);
                 res = uTF.GetString(decrypted);
             }
             catch(CryptographicException ce)
@@ -54,6 +54,10 @@ namespace Crypter.Resources
             catch(NullReferenceException e)
             {
                 return "null";
+            }
+            catch (FormatException)
+            {
+                return "badcipher";
             }
            
 

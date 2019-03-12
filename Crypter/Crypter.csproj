@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MixedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MixedControl.Designer.cs">
+      <DependentUpon>MixedControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\RSACrypt.cs" />
     <Compile Include="Resources\TripleDESCrypt.cs" />
     <Compile Include="Resources\SHA256Crypt.cs" />
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MixedControl.resx">
+      <DependentUpon>MixedControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SHA256Control.resx">
       <DependentUpon>SHA256Control.cs</DependentUpon>
     </EmbeddedResource>

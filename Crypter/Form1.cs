@@ -43,5 +43,17 @@ namespace Crypter
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void Mixedbutton_Click(object sender, EventArgs e)
+        {
+            SideSelection.Height = Mixedbutton.Height;
+            SideSelection.Top = Mixedbutton.Top;
+            mixedControl1.BringToFront();
+        }
+
+        private void mixedControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

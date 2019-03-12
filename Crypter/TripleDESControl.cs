@@ -39,7 +39,7 @@ namespace Crypter
         {
             if (!string.IsNullOrWhiteSpace(textBox4.Text))
             {
-                string res = triple.DecryptString(textBox4.Text);
+                string res = triple.DecryptString(textBox4.Text,textBox2.Text);
                 if (res.Equals("bad"))
                 {
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
@@ -48,6 +48,11 @@ namespace Crypter
                 else if (res.Equals("null"))
                 {
                     MessageBox.Show("No input Provided,Please provide an input", "Error");
+                }
+                else if (res.Equals("badcipher"))
+                {
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show("Bad Cipher", "Error", buttons, MessageBoxIcon.Error);
                 }
                 else
                 {

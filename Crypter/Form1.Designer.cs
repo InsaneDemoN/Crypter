@@ -38,8 +38,10 @@
             this.sha256 = new System.Windows.Forms.Button();
             this.SideSelection = new System.Windows.Forms.Panel();
             this.tripledes = new System.Windows.Forms.Button();
-            this.TripleDESControl = new Crypter.TripleDESControl();
+            this.Mixedbutton = new System.Windows.Forms.Button();
+            this.mixedControl1 = new Crypter.MixedControl();
             this.shA256Control1 = new Crypter.SHA256Control();
+            this.TripleDESControl = new Crypter.TripleDESControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimize_button)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -108,6 +110,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Mixedbutton);
             this.panel2.Controls.Add(this.sha256);
             this.panel2.Controls.Add(this.SideSelection);
             this.panel2.Controls.Add(this.tripledes);
@@ -157,13 +160,29 @@
             this.tripledes.UseVisualStyleBackColor = true;
             this.tripledes.Click += new System.EventHandler(this.Tripledes_Click);
             // 
-            // TripleDESControl
+            // Mixedbutton
             // 
-            this.TripleDESControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            this.TripleDESControl.Location = new System.Drawing.Point(360, 46);
-            this.TripleDESControl.Name = "TripleDESControl";
-            this.TripleDESControl.Size = new System.Drawing.Size(744, 600);
-            this.TripleDESControl.TabIndex = 2;
+            this.Mixedbutton.FlatAppearance.BorderSize = 0;
+            this.Mixedbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Mixedbutton.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Mixedbutton.ForeColor = System.Drawing.Color.Silver;
+            this.Mixedbutton.Image = ((System.Drawing.Image)(resources.GetObject("Mixedbutton.Image")));
+            this.Mixedbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Mixedbutton.Location = new System.Drawing.Point(25, 200);
+            this.Mixedbutton.Name = "Mixedbutton";
+            this.Mixedbutton.Size = new System.Drawing.Size(327, 90);
+            this.Mixedbutton.TabIndex = 4;
+            this.Mixedbutton.Text = "3DES + SHA";
+            this.Mixedbutton.UseVisualStyleBackColor = true;
+            this.Mixedbutton.Click += new System.EventHandler(this.Mixedbutton_Click);
+            // 
+            // mixedControl1
+            // 
+            this.mixedControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.mixedControl1.Location = new System.Drawing.Point(360, 46);
+            this.mixedControl1.Name = "mixedControl1";
+            this.mixedControl1.Size = new System.Drawing.Size(744, 600);
+            this.mixedControl1.TabIndex = 4;
             // 
             // shA256Control1
             // 
@@ -173,12 +192,21 @@
             this.shA256Control1.Size = new System.Drawing.Size(744, 600);
             this.shA256Control1.TabIndex = 3;
             // 
+            // TripleDESControl
+            // 
+            this.TripleDESControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.TripleDESControl.Location = new System.Drawing.Point(360, 46);
+            this.TripleDESControl.Name = "TripleDESControl";
+            this.TripleDESControl.Size = new System.Drawing.Size(744, 600);
+            this.TripleDESControl.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             this.ClientSize = new System.Drawing.Size(1104, 652);
+            this.Controls.Add(this.mixedControl1);
             this.Controls.Add(this.shA256Control1);
             this.Controls.Add(this.TripleDESControl);
             this.Controls.Add(this.panel2);
@@ -211,6 +239,8 @@
         private System.Windows.Forms.PictureBox Minimize_button;
         private TripleDESControl TripleDESControl;
         private SHA256Control shA256Control1;
+        private System.Windows.Forms.Button Mixedbutton;
+        private MixedControl mixedControl1;
     }
 }
 
