@@ -55,7 +55,8 @@ namespace Crypter
                 string res = SHA256Crypt.Decrypt(cipher, key);
                 if (res.Equals("CryptographicException"))
                 {
-                    MessageBox.Show("Bad input or input is just whitespaces", "Warning!");
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show("Bad Key , Enter exact key", "Error", buttons, MessageBoxIcon.Error);
 
                 }
                 else
